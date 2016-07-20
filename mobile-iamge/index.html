@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>图片</title>
+	<style type="text/css">
+		div,body,img{
+			margin:0;
+			padding:0;
+		}
+		.shade{
+			position:absolute;
+			top:0;
+			left:0;
+			opacity:0.2;
+			background-color:#000;
+		}
+		.div{
+			width:80%;
+			/*height:300px;*/
+			margin:50px auto;
+			position:relative;
+			overflow:hidden;
+			border-radius:100%;
+		}
+		img{
+			position:absolute;
+			top:0;
+			left:0;
+			width:120%;
+		}
+	</style>
+	<script src="jquery.js" type="text/javascript"></script>
+	<script src="image.js">
+	</script>
+	<script>
+	$(document).ready(function(){
+		var clientW=document.documentElement.clientWidth||document.body.clientWidth;
+		var clientH=document.documentElement.clientHeight||document.body.clientHeight;
+		$('.shade').css({'width':clientW,'height':clientH});
+	});
+	</script>
+</head>
+<body>
+<div class='shade'>
+	
+</div>
+	<div class="div">
+		<img src="img.jpg" class="pic"  />
+	</div>
+
+
+
+
+</body>
+</html>
